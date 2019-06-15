@@ -10,7 +10,7 @@ def new_operator():
     # return webdriver.PhantomJS()
     opt = webdriver.ChromeOptions()
     # opt.add_argument('--proxy-server=http://' + get_proxy().decode())
-    opt.set_headless()
+    # opt.set_headless()
     return webdriver.Chrome(chrome_options=opt)
 
 

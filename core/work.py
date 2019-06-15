@@ -21,9 +21,12 @@ def search_work(operator):
 
     # 提交
     operator.find_element_by_xpath('//*[@id="wrap"]/div[2]/div/div/div[1]/form/button').click()
-
+    c = 0
     while True:
         try:
             search(operator)
         except Exception as e:
+            c += 1
             print(e)
+        if c > 10:
+            break
