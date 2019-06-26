@@ -16,4 +16,4 @@ ToEmail = '1005281342@qq.com'
 # Email Msg
 WorkTitle = "BOSS直聘刷新简历"
 WorkOverEmailContext = "已经完成了目标工作"
-WorkErrEmailContext = "程序异常，"
+WorkErrEmailContext = "程序异常退出"

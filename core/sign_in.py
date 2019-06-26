@@ -5,7 +5,7 @@ from utils.functools import get_cookie, write_cookie
 
 
 def sing_in(operator):
-    not_sign_in = True
+    # not_sign_in = True
     cs, e = get_cookie()
     operator.get(URL)
     operator.maximize_window()
@@ -21,14 +21,14 @@ def sing_in(operator):
         operator.refresh()
     except Exception as sie:
         print("无法正常设置cookie", sie)
-
-        while not_sign_in:
-            try:
-                operator.find_element_by_xpath('//*[@id="header"]/div/div[3]/ul/li[5]/a/span')
-                write_cookie(operator)
-            finally:
-                sleep(60)
-                not_sign_in = False
+        sleep(60)
+        write_cookie(operator)
+        # while not_sign_in:
+        #     try:
+        #         operator.find_element_by_xpath('//*[@id="header"]/div/div[3]/ul/li[5]/a/span')
+        #         write_cookie(operator)
+        #     finally:
+        #         not_sign_in = False
 
     # state = False
     # c = 0

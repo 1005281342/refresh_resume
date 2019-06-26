@@ -13,7 +13,7 @@ def new_operator():
     # return webdriver.PhantomJS()
     opt = webdriver.ChromeOptions()
     # opt.add_argument('--proxy-server=http://' + get_proxy().decode())
-    # opt.set_headless()
+    opt.set_headless()
     return webdriver.Chrome(chrome_options=opt)
 
 
@@ -31,6 +31,7 @@ def write_cookie(operator, file_name=CookieFile):
     cookies = operator.get_cookies()
     with open(file_name, 'w') as f:
         f.write(json.dumps(cookies))
+    print("写入成功")
 
 
 def get_proxy():
